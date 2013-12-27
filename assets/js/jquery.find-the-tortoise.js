@@ -233,7 +233,7 @@
                             * Right col
                             */
                             } else {
-                                $icon.addClass('ok_2');
+                                $icon.remove();
                                 won = true;
                             }
                         }
@@ -270,11 +270,11 @@
 
                             setTimeout(function() {
                                 /**
-                                * Confirm
+                                * Won
                                 */
-                                if(confirm('You have won, retry?')) {
-                                    location.reload();
-                                }
+                                alert('You have won, retry?');
+
+                                location.reload();
                             }, 3000);
                         }
 
@@ -283,11 +283,11 @@
                         */
                         if(p.lives === 0) {
                             /**
-                            * Confirm
+                            * Lost
                             */
-                            if(confirm('You have lost, retry?')) {
-                                location.reload();
-                            }
+                            alert('You have won, retry?');
+
+                            location.reload();
                         }
                     }
                 });
