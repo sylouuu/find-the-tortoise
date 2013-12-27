@@ -1,0 +1,123 @@
+// Fonts
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    // Font Open Sans - regular
+    // ------------------------------------------------------------------------------------------------------
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('../fonts/opensans/regular/opensans.eot');
+        src: url('../fonts/opensans/regular/opensans.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/opensans/regular/opensans.woff') format('woff'),
+             url('../fonts/opensans/regular/opensans.ttf') format('truetype'),
+             url('../fonts/opensans/regular/opensans.svg#Open Sans') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    // Font Open Sans - semibold
+    // ------------------------------------------------------------------------------------------------------
+    @font-face {
+        font-family: 'Open Sans - Semibold';
+        src: url('../fonts/opensans/semibold/opensans.eot');
+        src: url('../fonts/opensans/semibold/opensans.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/opensans/semibold/opensans.woff') format('woff'),
+             url('../fonts/opensans/semibold/opensans.ttf') format('truetype'),
+             url('../fonts/opensans/semibold/opensans.svg#Open Sans - Semibold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+// Variables
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    @font-open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    @font-open-sans-semibold: 'Open Sans - Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    // Colors
+    // ------------------------------------------------------------------------------------------------------
+    @white:         white;
+    @yellow:        yellow;
+    @blue:          #3498DB;
+    @orange:        #E67E22;
+    @orange-dark:   #D35400;
+    @red:           #E74C3C;
+    @green:         #1ABC9C;
+
+
+// Mixin
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+    .radius(@radius) {
+        -webkit-border-radius: @radius;
+        -moz-border-radius: @radius;
+        border-radius: @radius;
+    }
+
+// Styles
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+    body {
+        font-family: @font-open-sans;
+        font-size: 14px;
+        background-color: @white;
+    }
+
+    #container {
+        text-align: center;
+
+        table {
+            display: inline-block;
+            vertical-align: middle;
+            border-collapse: collapse;
+
+            thead {
+                th {
+                    font-family: @font-open-sans-semibold;
+                    color: @blue;
+                    font-size: 1.2em;
+                }
+            }
+
+            td {
+                text-align: center;
+                width: 55px;
+                height: 55px;
+                padding-left: 10px;
+
+                .circle {
+                    width: 40px;
+                    height: 40px;
+                    background-color: @orange;
+                    .radius(25px);
+
+                    span {
+                        position: relative;
+                        top: 10px;
+                    }
+
+                    &.blue {
+                        background-color: @blue;
+                    }
+
+                    &.green {
+                        background-color: @green;
+                    }
+
+                    &.tortoise {
+                        background-image: url('../img/turtle_256.png');
+                        background-size: 40px 40px;
+                        background-repeat: no-repeat;
+                        background-color: inherit;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }

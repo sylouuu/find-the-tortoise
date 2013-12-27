@@ -1,4 +1,4 @@
 find-the-tortoise
 =================
 
-Micro jQuery game
+Find the tortoise hidden behind a circle
