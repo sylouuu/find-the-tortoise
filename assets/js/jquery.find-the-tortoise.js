@@ -285,7 +285,7 @@
                             /**
                             * Lost
                             */
-                            alert('You have won, retry?');
+                            alert('You have lost, retry?');
 
                             location.reload();
                         }
