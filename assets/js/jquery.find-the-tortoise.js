@@ -109,6 +109,13 @@
             },
 
             /**
+            * Function that shows lives
+            */
+            showLives: function () {
+                $('#lives').html(p.lives);
+            },
+
+            /**
             * Function that creates the table
             *
             * @param integer rows
@@ -123,7 +130,7 @@
                 /**
                 * Table head
                 */
-                $('<thead>').html('<tr><th colspan="'+ cols +'">Find the tortoise</th></tr>').appendTo($table);
+                $('<thead>').html('<tr><th colspan="'+ cols +'">Find the tortoise (<span id="lives"></span> lives remaining)</th></tr>').appendTo($table);
 
                 /**
                 * Table body
@@ -289,6 +296,11 @@
 
                             location.reload();
                         }
+
+                        /**
+                        * Show lives
+                        */
+                        app.showLives();
                     }
                 });
             }
@@ -309,6 +321,11 @@
         * Launching events
         */
         app.events();
+
+        /**
+        * Show lives
+        */
+        app.showLives();
 
         /**
         * Preserving chainability
